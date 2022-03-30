@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/contate-nos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./imagens/logo/test.png" type="image/x-icon">
+    <script src=".'/js/texto interativo.js"></script>
+    <title>Movidos a pura tecnologia.</title>
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-dark bg-black">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a href="./index.htm"><img src="./imagens/logo/java.png" class="img-fluid" alt=""></a>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header navbar-dark bg-dark">
+                        <h5 class="offcanvas-title mx-auto fw-bolder text-white" id="offcanvasNavbarLabel"> Movidos a
+                            pura tecnologia</h5>
+                        <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body navbar-dark bg-dark">
+                        <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.htm">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contate-nos.htm">Entre em contato conosco</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Artigos
+                                </a>
+                                <ul class="dropdown-menu bg-success" aria-labelledby="offcanvasNavbarDropdown">
+                                    <li><a class="dropdown-item text-white" href="O que é html.htm">O que é "html"?</a>
+                                    </li>
+                                    <li><a class="dropdown-item text-white" href="javascript.htm">JavaScript</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item text-white" href="python.htm">Linguagem de programação -
+                                            Python</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--Formulario contato-->
+
+    <section id="form">
+        <div class="container my-5">
+            <div class="row justify-content-center">
+                <div class="col-8">
+                    <h4 class=" text-center title-text">Em quê podemos melhorar?</h4>
+                    <h4 class=" text-center title-text">Envie sua opinião!</h4>
+                    <form method="POST" action="php/form.php">
+                        <div class="mb-3">
+                            <label for="nome" class="form-label text-white">Nome:</label>
+                            <input type="text" class="form-control" name="nome" id="nome"
+                                placeholder=" Informe o seu nome" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label text-white">Email:</label>
+                            <input type="email" class="form-control" name="email" id="email"
+                                aria-describedby="emailHelp" placeholder=" Informe o seu e-mail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="assunto" class="form-label text-white">Assunto:</label>
+                            <input type="text" class="form-control" name="assunto" id="assunto"
+                                placeholder=" Informe um assunto" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensagem" class="form-label text-white">Digite sua mensagem</label>
+                            <textarea class="form-control" name="txt" id="mensagem"
+                                placeholder="Digite aqui o que deseja" rows="3" required></textarea>
+                        </div>
+                        <div class="row text-center">
+                            <div class="col">
+                                <button type="submit" class="btn btn-danger mb-4 w-75 fw-bolder">Enviar
+                                    Mensagem</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <h1 class="text-white">Obrigado pelo contato! estamos sempre buscando evoluir.</h1>
+
+
+    <footer>
+        <div class="container-fluid bg-black align-content-around">
+            <div class="row">
+                <div class="col-sm-12 text-white text-center">
+                    <p class="mb-1 fw-bolder">Desenvolvido por Gustavo | Todos os direitos reservados.</p>
+                    <center class=" fw-bolder">2021 ©</center>
+                </div>
+            </div>
+    </footer>
+    <!--Scripts-->
+    <script>
+        function typeWriter(elemento) {
+            const textoArray = elemento.innerHTML.split('');
+            elemento.innerHTML = '';
+            textoArray.forEach((letra, i) => {
+                setTimeout(() => elemento.innerHTML += letra, 110 * i);
+            });
+        }
+
+        // Se estiver tendo problemas com performance, utilize o FOR loop como abaixo no local do forEach
+        // function typeWriter(elemento) {
+        //   const textoArray = elemento.innerHTML.split('');
+        //   elemento.innerHTML = '';
+        //   for(let i = 0; i < textoArray.length; i++) {
+        //     setTimeout(() => elemento.innerHTML += textoArray[i], 75 * i);
+        //   }
+        // }
+
+        const titulo = document.querySelector('h1');
+        typeWriter(titulo);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

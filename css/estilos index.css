@@ -1,0 +1,73 @@
+.width {
+  width: 350px;
+}
+
+.text-conteudo {
+  font-family: "Bebas Neue", cursive;
+  text-align: justify;
+}
+
+#btn-back-to-top {
+  position: fixed;
+  width: 35px;
+  bottom: 5rem;
+  right: 1vh;
+  display: none;
+  border-radius: 30px;
+  background-color: black;
+  color: white;
+}
+
+h1 {
+  max-width: 650px;
+  text-align: center;
+  margin: 60px auto;
+  font-family: "Courier New", Courier, monospace;
+  color: black;
+}
+
+h1::after {
+  content: "|";
+  opacity: 1;
+  margin-left: 5px;
+  display: inline-block;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.format{
+  color: cyan;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: rgb(132, 134, 131);
+
+}
+
+::-webkit-scrollbar-button{
+    background-color: rgb(0, 0, 0);
+
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgb(5, 161, 0);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(165, 88, 0);
+
+}

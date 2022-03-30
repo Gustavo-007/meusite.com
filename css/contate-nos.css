@@ -1,0 +1,35 @@
+body {
+  background-image: url(https://static.vecteezy.com/system/resources/previews/002/091/724/non_2x/abstract-technology-background-with-big-data-internet-connection-abstract-sense-of-science-and-technology-analytics-concept-graphic-design-illustration-vector.jpg);
+}
+
+.title-text {
+  color: white;
+  font-family: cursive;
+}
+
+h1 {
+  max-width: 750px;
+  text-align: center;
+  margin: 60px auto;
+  font-family: "Courier New", Courier, monospace;
+  color: black;
+}
+
+h1::after {
+  content: "|";
+  opacity: 1;
+  margin-left: 5px;
+  display: inline-block;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
