@@ -29,10 +29,10 @@ $arquivo = "
 $envio=mail($destino, $assunto, $arquivo, $headers);
 if($envio){
   echo'<script>alert("Mensagem enviada com sucesso!")</script>';
-  echo "<meta http-equiv='refresh' CONTENT='0;URL=../contate-nos.htm'>";
+  echo "<meta http-equiv='refresh' CONTENT='0;URL=../index.html'>";
 }else{
   echo '<script>alert("Erro ao enviar a mensagem! Confira os campos e tente novamente.")</script>';
-  echo "<meta http-equiv='refresh' CONTENT='0;URL=../contate-nos.htm'>";
+  echo "<meta http-equiv='refresh' CONTENT='0;URL=../index.html'>";
 }
 
 ?>

@@ -2,9 +2,46 @@
   width: 350px;
 }
 
+.title{
+  font-family: 'Dancing Script', cursive;
+}
+
 .text-conteudo {
   font-family: "Bebas Neue", cursive;
   text-align: justify;
+}
+
+.img-logo{
+  width: 65px;
+}
+
+.navbar-dark .navbar-toggler {
+  color: black;
+  border-color: black;
+}
+
+.w{
+  width: 50px;
+}
+
+.imagem1{
+  transition: all 1s;
+  cursor: pointer;
+}
+
+.imagem1:hover{
+  -webkit-transform: rotateZ(360deg);
+  transform: rotatey(360deg);
+}
+
+.imagem2{
+  transition: all 1s;
+  cursor: pointer;
+}
+
+.imagem2:hover{
+  -webkit-transform: rotateZ(360deg);
+  transform: rotateZ(360deg);
 }
 
 #btn-back-to-top {
@@ -70,4 +107,23 @@ h1::after {
 ::-webkit-scrollbar-thumb:hover{
     background-color: rgb(165, 88, 0);
 
+}
+
+.flutuar{
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.flutuar:hover, .flutuar:focus, .flutuar:active {
+  -webkit-transform: translateY(-8px);
+  transform: translateY(-8px);
 }
