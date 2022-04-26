@@ -1,4 +1,4 @@
-let mybutton = document.getElementById("btn-back-to-top");
+let mybutton = document.getElementById("redessociais");
 
 
 window.onscroll = function () {
